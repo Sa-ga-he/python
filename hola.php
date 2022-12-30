@@ -31,9 +31,9 @@ echo "<br><br>";
 
 
 $arra = [
-    [14, 5, 7],
-    [18, 4, 1],
-    [19, 5, 2]
+    [14 , 5, 5, 7],
+    [18, 4,4,4,4, 1],
+    [19, 7,6,7,8,7,7,5, 2]
 ];
 
 
@@ -45,3 +45,26 @@ for ($i=0; $i < count($arra) ; $i++) {
         //echo $arra[$i][$a]."<br>";
     }
 }
+
+echo "<br><br>";
+
+$arra = array_map('array_unique', $arra);
+
+foreach ($arra as $subarray) {
+    foreach ($subarray as $value) {
+        echo $value . "<br>";
+    }
+}
+
+
+echo "<br><br>";
+
+
+function hola($text){
+    if ($text=='computadora') {
+        $patata = 'es una compi:[';
+    }
+    return $patata;
+}
+
+echo hola('computadora');
